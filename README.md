@@ -1,2 +1,3 @@
-# web-php-putharn
-web php project
+# phutharn aendu
+* รหัสนักศึกษา
+* แผนกวิชา
