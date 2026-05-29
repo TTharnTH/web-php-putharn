@@ -1,2 +1,3 @@
-# web-php-putharn
-web php project
+# ภูธาร เอ็นดู
+* รหัสนักศึกษา
+* แผนกวิชา
