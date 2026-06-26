@@ -9,8 +9,7 @@
         $gender = $_GET['UserGender'] ?? 'ไม่ระบุ';
         $city = $_GET['userCity'] ?? 'ไม่ระบุ';
         $hobby = $_GET['userHobby'] ?? ['ไม่ระบุ'];
-        $message = $_GET['userMsg'] ?: 'ไม่ระบุ';
-
+        $message = $_GET['userMsg'] ?? 'ไม่ระบุ';
         
     }
     
