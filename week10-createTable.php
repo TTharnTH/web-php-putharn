@@ -1,4 +1,5 @@
 <?php
+    // Database connection parameters
     $host = "localhost";
     $dbname = "school";
     $username = "root";
@@ -16,7 +17,18 @@
             PDO::ERRMODE_EXCEPTION
         );
 
-        echo "เชื่อมต่อฐานข้อมูลสำเร็จ";
+        $sql ="
+        CREATE TABLE IF NOT EXISTS student(
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(100) NOT NULL,
+            email VARCHAR(100),
+            age INT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ";
+
+        $pdo->exec($sql);
+        echo "สร้างตารางสำเร็จ";
     }catch(PDOException $e){
         echo "เกิดข้อผิดพลาด : " . $e->getMessage();
     }

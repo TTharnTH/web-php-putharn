@@ -1,4 +1,5 @@
 <?php
+    // Database connection parameters
     $host = "localhost";
     $dbname = "school";
     $username = "root";
@@ -16,7 +17,13 @@
             PDO::ERRMODE_EXCEPTION
         );
 
-        echo "เชื่อมต่อฐานข้อมูลสำเร็จ";
+        $sql ="
+        UPDATE student
+        SET age = 21
+        WHERE id = 1
+        ";
+        $pdo->exec($sql);
+        echo "เปลี่ยนแปลงข้อมูลแล้ว";
     }catch(PDOException $e){
         echo "เกิดข้อผิดพลาด : " . $e->getMessage();
     }
