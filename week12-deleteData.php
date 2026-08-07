@@ -18,12 +18,11 @@
         );
 
         $sql ="
-        INSERT INTO student (name,email,age)
-        VALUES ('ตกเตียง ตอนนอนเสื่อ', 'example3@email.com', 21)
+        DELETE FROM student WHERE id = 4
         ";
 
         $pdo->exec($sql);
-        echo "เพิ่มข้อมูลสำเร็จแล้ว";
+        echo "ลบข้อมูลสำเร็จแล้ว";
     }catch(PDOException $e){
         echo "เกิดข้อผิดพลาด : " . $e->getMessage();
     }

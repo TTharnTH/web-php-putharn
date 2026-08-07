@@ -17,13 +17,21 @@
             PDO::ERRMODE_EXCEPTION
         );
 
+        $name = "ภูธาร เอ็นดู";
+
         $sql ="
-        INSERT INTO student (name,email,age)
-        VALUES ('ตกเตียง ตอนนอนเสื่อ', 'example3@email.com', 21)
+        SELECT * FROM student WHERE name = ?
         ";
 
-        $pdo->exec($sql);
-        echo "เพิ่มข้อมูลสำเร็จแล้ว";
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->execute([$name]);
+
+        $student = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        echo "นักศึกษาชื่อ " . $name . " มีข้อมูลดังนี้<br>";
+        echo "ID: " . $student['id'] . "<br>";
+
     }catch(PDOException $e){
         echo "เกิดข้อผิดพลาด : " . $e->getMessage();
     }
