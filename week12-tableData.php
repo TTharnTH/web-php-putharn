@@ -23,6 +23,7 @@
                 <th>Name</th>
                 <th>email</th>
                 <th>age</th>
+                <th>Actions</th>
             </tr>
             <?php foreach($students as $student){ ?>
             <tr>
@@ -30,6 +31,10 @@
                 <td><?= $student['name']?></td>
                 <td><?= $student['email']?></td>
                 <td><?= $student['age']?></td>
+                <td>
+                    <a href="edit.php?id=<?= $student['id']?>">แก้ไข</a>
+                    <a href="delete.php?id=<?= $student['id']?>">ลบ</a>
+                </td>
             </tr>
             <?php } ?>
         </table>
