@@ -12,17 +12,17 @@
 
     <p>
         ชื่อ<br>
-        <input type="text" name="name">
+        <input type="text" name="name" required>
     </p>
 
     <p>
         Email<br>
-        <input type="email" name="email">
+        <input type="email" name="email" required>
     </p>
 
     <p>
         อายุ<br>
-        <input type="number" name="age">
+        <input type="number" name="age" required>
     </p>
 
     <button type="submit">
@@ -33,7 +33,7 @@
 
 <br>
 
-<a href="index.php">
+<a href="week12-tableData.php">
     กลับหน้าหลัก
 </a>
 

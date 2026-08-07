@@ -16,6 +16,7 @@
     </head>
     <body>
         <h2>ข้อมูลนักเรียน</h2>
+        <a href="add.php">เพิ่มข้อมูลนักเรียน</a>
         <table border="1">
             <tr>
                 <th>ID</th>
